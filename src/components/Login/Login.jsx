@@ -1,7 +1,9 @@
 import styles from "./Login.module.css";
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = (props) => {
+  let navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState(false);
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -26,11 +28,10 @@ const Login = (props) => {
         JSON.stringify({ email: email, password: password })
       );
       setErrorMessage(false);
+      navigate('movies');
     } else {
       setErrorMessage(true);
     }
-    console.log(emailRef.current.value);
-    console.log(passwordRef.current.value);
   };
 
   return (
