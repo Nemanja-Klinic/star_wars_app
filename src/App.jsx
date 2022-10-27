@@ -1,15 +1,30 @@
 import Login from "./components/Login/Login.jsx";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Resources from "./components/Resources/Resources.jsx";
 
+const ProtectedRoute = (props) => {
+  if (!localStorage.getItem("user")) {
+    return <Navigate to="/" replace />;
+  }
+  return props.children;
+};
 
 function App() {
   return (
     <BrowserRouter>
-      <header className="logo"></header>
       <Routes>
-        <Route path="/" element={<Login></Login>}/>
-        <Route path="movies" element={<p>Movies</p>}/>
+        <Route path="/" element={<Login />} />
+        <Route
+          path="resources/:type"
+          element={
+            <ProtectedRoute>
+              <Navbar />
+              <Resources />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
