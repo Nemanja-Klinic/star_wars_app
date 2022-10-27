@@ -13,16 +13,16 @@ const Navbar = () => {
         <li>
           <NavLink
             className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="resources/films"
+            to="/resources/films"
           >
             Films
           </NavLink>
         </li>
         <li>
-          <NavLink to="resources/people">People</NavLink>
+          <NavLink to="/resources/people">People</NavLink>
         </li>
         <li>
-          <NavLink to="resources/starship">Starships</NavLink>
+          <NavLink to="/resources/starships">Starships</NavLink>
         </li>
       </ul>
       <div>
