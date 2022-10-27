@@ -1,16 +1,24 @@
+:root {
+  --senfic: #736800;
+  --lightSenf: #C2B000;
+  --darkSenf: #1A1700;
+  --pureBlack: #000000;
+  --banana: #FFE800;
+}
+
 *{
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-
+  background: rgba(0, 0, 0, 0.7) url(../public/bg.jpg);
+  background-size: cover;
+  background-blend-mode: darken;
 }
 
 body{
-  font-family: 'Courier New', Courier, monospace;
-  color: white;
-  background-color: black;
-
+  color: var(--lightSenf);
 } 
-/* dasdasdasdas */
+/* https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_horiz@2x-f98247cb30aa.png */
 /* dasdasdasdas */
 /* dasdasdasdas */
 /* dasdasdasdas */
