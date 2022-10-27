@@ -1,13 +1,43 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import styles from "./Navbar.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const userName = JSON.parse(localStorage.getItem("user")).email.split("@")[0];
+
   return (
-    <>
-      <li>
-        
-      </li>
-    </>
+    <nav>
+      <ul>
+        <li>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "inactive")}
+            to="resources/films"
+          >
+            Films
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="resources/people">People</NavLink>
+        </li>
+        <li>
+          <NavLink to="resources/starship">Starships</NavLink>
+        </li>
+      </ul>
+      <div>
+        <label className={styles.left}>{userName}</label>
+        <label
+          onClick={(e) => {
+            localStorage.removeItem("user");
+            navigate("/");
+          }}
+        >
+          ⇨
+        </label>
+      </div>
+    </nav>
   );
-}
+};
 
 export default Navbar;
