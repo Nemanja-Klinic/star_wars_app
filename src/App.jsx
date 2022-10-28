@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Resources from "./components/Resources/Resources.jsx";
+import ResourceDetails from "./components/Resources/ResourceDetails/ResourceDetails.jsx";
 
 const ProtectedRoute = (props) => {
   if (!localStorage.getItem("user")) {
@@ -30,7 +31,7 @@ function App() {
           element={
             <ProtectedRoute>
               <Navbar />
-              <Resources />
+              <ResourceDetails />
             </ProtectedRoute>
           }
         />

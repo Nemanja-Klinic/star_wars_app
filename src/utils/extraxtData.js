@@ -1,5 +1,5 @@
 
-export const extraxtData= (resources, type) => {return resources.map((res)=>{
+export const extraxtData = (resources, type) => {return resources.map((res)=>{
     if(type === 'planets') {
       return {
         title: res.name,

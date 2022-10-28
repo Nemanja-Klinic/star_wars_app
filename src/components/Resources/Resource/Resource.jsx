@@ -1,12 +1,14 @@
-import { useParams } from "react-router-dom/dist";
 import styles from "./Resource.module.css";
 import { useNavigate } from "react-router-dom/dist";
+import { useParams } from "react-router-dom";
 
 const Resource = (props) => {
-  const param = useParams();
   const navigate = useNavigate();
-  const handleDetail = () => {};
-
+  const param = useParams();
+  const handleDetail = (event) => {
+    console.log("AAAAAaAA");
+    navigate(`/resources/${param.type}/${props.id}`);
+  };
   return (
     <div>
       <div className={styles.box}>
