@@ -12,6 +12,7 @@ nav{
   margin-left: 1rem;
   margin-right: 2rem; */
 }
+
 ul{
   display: flex;
   align-items: center;
@@ -35,6 +36,7 @@ a{
 
 .right{
 margin-right: 1rem;
+color:rgb(197, 197, 197);
 }
 
 .active{

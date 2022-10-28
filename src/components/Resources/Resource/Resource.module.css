@@ -1,0 +1,27 @@
+.box{
+    display: flex;
+    flex-direction: column;
+    background: rgba(252, 252, 252, 0.35);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border-radius: 2rem;
+    border: 5px solid rgb(0, 0, 0);
+    padding: 1.5rem;
+    text-align: left;
+    color: white;
+    font-size: 18px;
+    min-height: 250px;
+    max-height: 1000px;
+    height: fit-content;
+    cursor: pointer;
+}
+
+
+
+h3{
+    margin-bottom: 1rem;
+}
+p{
+    margin-top: 1rem;
+}

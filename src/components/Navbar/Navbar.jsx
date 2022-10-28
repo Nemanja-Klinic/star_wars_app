@@ -30,7 +30,7 @@ const Navbar = () => {
             <NavLink to="/resources/people">People</NavLink>
           </li>
           <li>
-            <NavLink to="/resources/starship">Starships</NavLink>
+            <NavLink to="/resources/starships">Starships</NavLink>
           </li>
           <li>
             <NavLink to="/resources/vehicles">Vehicles</NavLink>
@@ -42,7 +42,7 @@ const Navbar = () => {
             <NavLink to="/resources/planets">Planets</NavLink>
           </li>
         </ul>
-        <div>
+        <div className={styles.userName}>
           <label className={styles.right}>{userName}</label>
           <label
             className={styles.right}

@@ -10,12 +10,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: rgba(0, 0, 0, 0.7) url(../public/bg.jpg);
-  background-size: cover;
-  background-blend-mode: darken;
+  
 }
 
 body{
+  background: rgba(0, 0, 0, 0.5) url(../public/bg.jpg);
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: darken;
   color: var(--lightSenf);
 } 
 /* https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_horiz@2x-f98247cb30aa.png */

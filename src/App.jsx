@@ -25,6 +25,15 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="resources/:type/:id"
+          element={
+            <ProtectedRoute>
+              <Navbar />
+              <Resources />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
