@@ -6,7 +6,6 @@ const Resource = (props) => {
   const navigate = useNavigate();
   const param = useParams();
   const handleDetail = (event) => {
-    console.log("AAAAAaAA");
     navigate(`/resources/${param.type}/${props.id}`);
   };
   return (

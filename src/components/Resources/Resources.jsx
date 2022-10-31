@@ -40,18 +40,6 @@ const Resources = (props) => {
   };
   return (
     <>
-      {/* {isLoading && resources.length === 0 ? (
-        <div className={styles.loader}></div>
-      ) : null}
-      {!isLoading && resources.length !== 0 ? (
-        <div className={styles.grid}>
-          {resources.map((res) => {
-            return <Resource key={res.title} resource={res} />;
-          })}
-        </div>
-      ) : null}
-      {!isLoading && resources.length === 0 ? <h1>No results</h1> : null} */}
-
       {isLoading ? (
         <div className={styles.loader}></div>
       ) : (

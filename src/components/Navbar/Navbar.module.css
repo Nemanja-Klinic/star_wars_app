@@ -7,10 +7,6 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding-right: 1rem;
-  padding-left: 1rem;
-  margin-left: 1rem;
-  margin-right: 2rem; */
 }
 
 ul{
@@ -19,16 +15,43 @@ ul{
   justify-content: flex-start;
   height: 100%;
   padding: 1rem;
-  
+
 }
 li{
   list-style-type: none;
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 1rem;
   margin: 0px 0.5rem;
 }
+.hamburger{
+  display: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 0px;
+}
+
+.hamburger:hover{
+  font-size: 1.6rem;
+}
+.hamburgerMenu{
+  display: none;
+   /*flex-direction: column;*/
+   border-bottom: 1px solid white;
+   border-radius: 1rem;
+  align-items: center;
+  justify-content: center; 
+  grid-template-columns: 10rem 10rem;
+
+}
+.hamburgerMenu li{
+ justify-content: center;
+ padding: 0.6rem;
+}
+
 a{
   text-decoration: none;
   color: rgb(197, 197, 197);
@@ -37,6 +60,14 @@ a{
 .right{
 margin-right: 1rem;
 color:rgb(197, 197, 197);
+}
+.right:hover{
+  font-size: 1.5rem;
+  color: #C2B000;
+
+}
+li a:hover{
+  color: #C2B000;
 }
 
 .active{
@@ -50,3 +81,40 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+  .userName{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:10%;
+  }
+  
+  
+@media all and (max-width: 920px){
+  .userName{
+    width:10rem;
+  }
+}
+
+@media all and (max-width: 800px){
+  .userName{
+    width:10rem;
+  }
+  ul{
+    padding-left: 0px;
+  }
+  nav ul li {
+    display: none;
+  }
+  .hamburger{display: flex;
+ }
+ .hamburgerMenu{
+  display: grid;
+
+ }
+}
+
+@media all and (max-width: 500px){
+  .hamburgerMenu{
+    grid-template-columns: 30rem;
+
+  }}

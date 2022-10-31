@@ -5,15 +5,12 @@
     grid-template-columns: 20rem 20rem 20rem;
     justify-content: center;
     align-items: center;
-    /* padding: 4rem; */
 
 }
 .container{
     display: flex;
     flex-direction: column;
-    padding-right: 4rem;
-    padding-left: 4rem;
-    padding-bottom: 4rem;
+
 
 
 
@@ -21,8 +18,8 @@
 .searchWrapper{
     display: flex;
     justify-content: flex-end;
-    margin-right: 2.5rem;
     margin-bottom: 1.5rem;
+    margin-right: 3rem;
 }
 .inputStyle{
     background-color: transparent;
@@ -30,6 +27,7 @@
     width: 12rem;
     height: 2rem;
     margin-top: 2rem;
+    margin-right: 4rem;
     border-radius: 20px;
     color:gray;
     padding: 1rem;
@@ -60,4 +58,59 @@
       transform: rotate(360deg);
     }
   }
-  
+
+@media all and (max-width: 1090px){
+  .grid{
+    grid-template-columns: 25rem 25rem;
+
+  }
+  .inputStyle{
+    width: 15rem;
+  }
+  .searchWrapper{
+    margin-right: 1.5rem;
+
+
+  }
+}
+@media all and (max-width: 960px){
+  .searchWrapper{
+    margin-right: 0rem;
+
+  }
+}
+
+@media all and (max-width: 880px){
+  .grid{
+    grid-template-columns: 20rem 20rem;
+
+  }
+  .searchWrapper{
+    margin-right: 2rem;
+  }
+}
+
+@media all and (max-width: 780px){
+  .grid{
+    grid-template-columns: 30rem;
+
+  }
+  .searchWrapper{
+    margin-right: 0rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .inputStyle{
+    margin-right: 0rem;
+
+    width: 80%;
+  }
+}
+@media all and (max-width: 500px){
+  .grid{
+    grid-template-columns: 20rem;
+
+  }
+}
