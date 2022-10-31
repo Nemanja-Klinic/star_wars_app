@@ -9,6 +9,7 @@
 
 
 input{
+    background-color: transparent;
     padding:0.4rem;
     width: 50%;
     border-radius: 0.2rem;
@@ -44,6 +45,7 @@ img{
 }
 
 button{
+    background-color: transparent;
     border: 1px solid rgb(194, 176, 0, 0.5);
     text-align: center;
     width:10rem;
@@ -57,6 +59,7 @@ button{
 
 button:hover{
     background-color:  rgb(194, 176, 0, 1);
+    color: black;
 }
 .error{
     margin-top: 1rem;

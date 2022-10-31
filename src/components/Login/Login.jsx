@@ -1,6 +1,7 @@
 import styles from "./Login.module.css";
-import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Login = (props) => {
   let navigate = useNavigate();
@@ -9,7 +10,7 @@ const Login = (props) => {
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const user = localStorage.getItem("user");
     if (user) navigate("resources/planets");
   }, []);
